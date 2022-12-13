@@ -1,7 +1,7 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is being triggered on pull request 🚀
 on:
-  pull_request:
+  pull_request_review:
     types: [submitted]
 
 jobs:
@@ -19,5 +19,4 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-build:
-if: github.event.review.state == 'approved'
+        if: github.event.review.state == 'approved'

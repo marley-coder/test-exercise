@@ -8,7 +8,9 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "commit sha is  ${{ github.base_ref }}"
+      - run: echo "ref  ${{ github.ref }}"
+      - run: echo "head ref is  ${{ github.head_ref }}"
+      - run: echo "base ref is  ${{ github.base_ref }}"
       - run: echo "commit sha is  ${{ github.sha }}"
       - run: echo "owner/repository is ${{ github.repository }}"
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."

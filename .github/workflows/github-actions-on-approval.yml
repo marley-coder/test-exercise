@@ -8,6 +8,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "ref name ${{ github.ref_name }}"
       - run: echo "ref  ${{ github.ref }}"
       - run: echo "head ref is  ${{ github.head_ref }}"
       - run: echo "base ref is  ${{ github.base_ref }}"

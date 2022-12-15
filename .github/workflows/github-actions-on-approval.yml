@@ -8,6 +8,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "actor ${{ github.actor }}"
       - run: echo "repositoryUrl ${{ github.repositoryUrl }}"
       - run: echo "ref name ${{ github.ref_name }}"
       - run: echo "ref  ${{ github.ref }}"

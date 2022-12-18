@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "event number (PR number) ${{ github.event.number }}"
-      - run: echo "actor ${{ github.actor }}"
+      - run: echo " actor ${{ github.actor }}"
       - run: echo "repositoryUrl ${{ github.repositoryUrl }}"
       - run: echo "ref name ${{ github.ref_name }}"
       - run: echo "ref  ${{ github.ref }}"

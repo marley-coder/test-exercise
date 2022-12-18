@@ -10,7 +10,7 @@ jobs:
       - name: Sending request step name
         uses: fjogeleit/http-request-action@v1
         with:
-          url: 'https://eo84zv5pd9vga30.m.pipedream.net'
+          url: 'https://faldo-code-exercises.herokuapp.com/api/notify_pr_approved'
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
           data: '{"approver": "${{ github.actor }}", "ref_name": "${{ github.ref_name }}"}'

@@ -14,5 +14,4 @@ jobs:
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
           data: '{"approver": "${{ github.actor }}", "ref_name": "${{ github.ref_name }}"}'
-      - run: echo "🍏 This job's status is ${{ job.status }}."
         if: github.event.review.state == 'approved'

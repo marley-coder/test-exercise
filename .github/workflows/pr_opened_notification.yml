@@ -1,0 +1,17 @@
+name: Exercise attempt PR opened
+run-name: PR opened
+on:
+  pull_request:
+    types: [opened]
+jobs:
+  send-http-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sending Exercise attempt PR opened HTTP request
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://eo84zv5pd9vga30.m.pipedream.net'
+          method: 'POST'
+          customHeaders: '{"Content-Type": "application/json"}'
+          data: '{"repo_url": "${{ github.repositoryUrl }}", "pr_number": "${{ github.event.number }}", "opened_by_github_username": "${{ github.actor }}"}'
+

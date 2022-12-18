@@ -1,9 +1,9 @@
-#name: Exercise attempt PR approved
-#run-name: PR approved
-#on:
-#  pull_request_review:
-#    types: [submitted]
-#jobs:
+name: Exercise attempt PR approved
+run-name: PR approved
+on:
+  pull_request_review:
+    types: [submitted]
+jobs:
 #  send-http-request:
 #    runs-on: ubuntu-latest
 #    steps:

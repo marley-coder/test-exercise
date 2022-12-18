@@ -1,9 +1,9 @@
-#name: Exercise attempt PR opened
-#run-name: PR opened
-#on:
-#  pull_request:
-#    types: [opened]
-#jobs:
+name: Exercise attempt PR opened
+run-name: PR opened
+on:
+  pull_request:
+    types: [opened]
+jobs:
 #  send-http-request:
 #    runs-on: ubuntu-latest
 #    steps:

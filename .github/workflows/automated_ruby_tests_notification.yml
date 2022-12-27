@@ -2,7 +2,7 @@ name: Automated ruby tests run
 run-name: Automated ruby tests
 on: [push, pull_request]
 jobs:
-  send-http-request:
+  ruby-tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

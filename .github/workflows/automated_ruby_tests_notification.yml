@@ -1,8 +1,6 @@
 name: Automated ruby tests run
 run-name: Automated ruby tests
-on:
-  pull_request_review:
-    types: [submitted]
+on: [push, pull_request]
 jobs:
   send-http-request:
     runs-on: ubuntu-latest

@@ -1,0 +1,22 @@
+name: Automated ruby tests run
+run-name: Automated ruby tests
+on: pull_request
+jobs:
+  ruby-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@359bebbc29cbe6c87da6bc9ea3bc930432750108
+      - name: Install dependencies
+        run: bundle install
+      - name: Run tests
+        run: bundle exec rspec
+      - name: Send http request for automated tests
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://faldo-code-exercises.herokuapp.com/api/notify_automated_tests_successful'
+          method: 'POST'
+          customHeaders: '{"Content-Type": "application/json"}'
+          data: '{"repo_url": "${{ github.repositoryUrl }}", "pr_number": "${{ github.event.number }}", "opened_by_github_username": "${{ github.actor }}"}'
+

@@ -13,5 +13,5 @@ jobs:
           url: 'https://faldo-code-exercises.herokuapp.com/api/notify_pr_opened'
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"repo_url": "${{ github.repositoryUrl }}", "pr_number": "${{ github.event.number }}", "opened_by_github_username": "${{ github.actor }}"}'
+          data: '{"repo_url": "${{ github.repositoryUrl }}", "pr_number": "${{ github.event.number }}", "opened_by_github_username": "${{ github.actor }}", "source": "pr opened notification"}'
 
